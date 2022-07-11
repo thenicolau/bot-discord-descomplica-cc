@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bot-descomplica-cc
+    container_name: bot-descomplica-cc
+    environment:
+      - NODE_ENV=production
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    ports:
+      - "${SERVER_PORT:-3000}:${SERVER_PORT:-3000}"
+    networks:
+      - descomplica
+    command: yarn start:prod
+networks:
+  descomplica:
