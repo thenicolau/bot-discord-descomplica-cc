@@ -6,13 +6,9 @@ export const onInteractionCreate = async (interaction: Interaction) => {
   try {
     if (!interaction.isCommand()) return;
 
-    for (const command of commands) {
-      if (command.data.name === interaction.commandName) {
-        await command.run(interaction);
+    const command = commands.find(command => command.data.name === interaction.commandName);
 
-        break;
-      }
-    }
+    if (command) await command.run(interaction);
   } catch (error) {
     errorHandler('onInteraction event', error);
   }

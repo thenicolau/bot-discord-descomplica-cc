@@ -23,7 +23,7 @@ export const onReady = async (bot: Client) => {
 
     await rest.put(Routes.applicationCommands(bot.application.id), { body });
 
-    logHandler.log('info', 'Connected to Discord TESTE!');
+    logHandler.log('info', 'Connected to Discord!');
   } catch (error) {
     errorHandler('onReady event', error);
   }
