@@ -1,2 +1,15 @@
+# DIRECTORIES
 node_modules
+build
+.vscode/*
+!.vscode/*.code-snippets
+!.vscode/launch.json
+
+# PACKAGE MANAGER
+yarn.lock
+package-lock.json
+yarn-debug.log*
+yarn-error.log*
+
+# ENVIRONMENT
 .env
