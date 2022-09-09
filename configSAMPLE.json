@@ -1,0 +1,5 @@
+{
+    "clientId": "ID DA SUA APLICAÇÃO",
+    "guildId": "ID SERVIDOR QUE VOCÊ QUER ADICIONAR O BOT",
+    "token": "TOKEN DO BOT"
+}
